@@ -4,7 +4,7 @@ The script can be easily customized to change what kinds of posts it looks for. 
 
 # How it works
 
-The script goes to nairaland and radar.techcabal.com to find posts that resemble job posts then creates links to them and outputs the links
+The script goes to nairaland.com and radar.techcabal.com to find posts that resemble job posts then creates links to them and outputs the links
 
 # Input
 - Links to crawl
