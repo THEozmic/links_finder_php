@@ -26,6 +26,8 @@ function getJobs ($from) {
 			$word_exists =  strpos(strtolower($text), strtolower($wordvalue));
 			if ($word_exists !== false) {
 				$site = "";
+				// heads up, scrappy logic upcoming... 
+				// @todo make this smart enough to remove "/new" and "/c/jobs": can't be that hard... 
 				if ($from == "http://nairaland.com/webmasters/new") {
 					$site = "http://www.nairaland.com";
 				}
