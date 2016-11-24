@@ -28,12 +28,8 @@ function getJobs ($from) {
 				$site = "";
 				// heads up, scrappy logic upcoming... 
 				// @todo make this smart enough to remove "/new" and "/c/jobs": can't be that hard... 
-				if ($from == "http://nairaland.com/webmasters/new") {
-					$site = "http://www.nairaland.com";
-				}
-				if ($from == "http://radar.techcabal.com/c/jobs") {
-					$site = "http://radar.techcabal.com";
-				}
+				$url=parse_url($from);
+				$site=$url['scheme'].'://'.$url['host'];
 				echo "<a href='$site$href'>$text</a><br>";
 			}
 		}
