@@ -25,9 +25,6 @@ function getJobs ($from) {
 		foreach ($word_pool as $wordkey => $wordvalue) {
 			$word_exists =  strpos(strtolower($text), strtolower($wordvalue));
 			if ($word_exists !== false) {
-				$site = "";
-				// heads up, scrappy logic upcoming... 
-				// @todo make this smart enough to remove "/new" and "/c/jobs": can't be that hard... 
 				$url=parse_url($from);
 				$site=$url['scheme'].'://'.$url['host'];
 				echo "<a href='$site$href'>$text</a><br>";
